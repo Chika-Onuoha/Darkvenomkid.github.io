@@ -1,0 +1,162 @@
+body {
+  overflow: hidden;
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+#space {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("http://s7.postimg.org/l37ivxk0p/background.jpg");
+  background-size: cover;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+#space.started {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: none;
+}
+#space.started #start {
+  display: none;
+}
+#space.started #spaceship {
+  display: block;
+}
+#space.hit {
+  background: #341414;
+  -moz-box-shadow: inset 0 0 50px rgba(255, 0, 0, 0.6);
+  -webkit-box-shadow: inset 0 0 50px rgba(255, 0, 0, 0.6);
+  box-shadow: inset 0 0 50px rgba(255, 0, 0, 0.6);
+}
+
+h1 {
+  position: absolute;
+  top: 2%;
+  left: 49%;
+  font-size: 48px;
+  line-height: 1;
+  margin: 0;
+  color: white;
+}
+h1#livesCount {
+  left: auto;
+  right: 2%;
+  color: red;
+}
+
+#start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25%;
+  margin-top: -60px;
+  font-size: 60px;
+  line-height: 120px;
+  width: 50%;
+  text-align: center;
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+#start:hover {
+  background: #cc0000;
+}
+
+#spaceship {
+  display: none;
+  border: 1px solid red;
+  position: absolute;
+  z-index: 1;
+  bottom: 50px;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  background-image: url("http://s15.postimg.org/7zy0wu609/lucian.png");
+  background-size: cover;
+}
+
+.lazer {
+  position: absolute;
+  border: 1px solid red;
+  bottom: 30%;
+  left: 11px;
+  width: 50px;
+  height: 50px;
+  background-image: url("http://t00.deviantart.net/DiLB8d7CN_3ukE66SSZT4rzwams=/fit-in/150x150/filters:no_upscale():origin()/pre00/639a/th/pre/f/2014/166/8/8/plasma_bullet_texture_by_elelec-d7mg2vg.png");
+  -moz-transition: all 6s linear;
+  -o-transition: all 6s linear;
+  -webkit-transition: all 6s linear;
+  transition: all 6s linear;
+}
+.lazer.shot {
+  /*bottom: 100%;*/
+  left: 10%;
+  background-size: 100% 100%;
+}
+
+.enemy {
+  position: absolute;
+  border: 1px solid red;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-image: url("http://bitspers.com/wp-content/uploads/2014/06/League-of-Legends-Red-Minion1.png");
+  background-size: 100% 100%;
+  -moz-transition: left 4s linear;
+  -o-transition: left 4s linear;
+  -webkit-transition: left 4s linear;
+  transition: left 4s linear;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.enemy.moving {
+  left: 100%;
+}
+.enemy.exploding {
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  background: red;
+  width: 60px;
+  height: 60px;
+  margin-left: -5px;
+  margin-top: -5px;
+}
+
+.star {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  -moz-transition: -moz-transform 2s linear;
+  -o-transition: -o-transform 2s linear;
+  -webkit-transition: -webkit-transform 2s linear;
+  transition: transform 2s linear;
+}
+.star.fast {
+  -moz-transition: -moz-transform 2.5s linear;
+  -o-transition: -o-transform 2.5s linear;
+  -webkit-transition: -webkit-transform 2.5s linear;
+  transition: transform 2.5s linear;
+}
+.star.shooting {
+  -moz-transform: translate3d(0, 1200px, 0);
+  -ms-transform: translate3d(0, 1200px, 0);
+  -webkit-transform: translate3d(0, 1200px, 0);
+  transform: translate3d(0, 1200px, 0);
+}

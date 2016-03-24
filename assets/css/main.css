@@ -71,6 +71,27 @@
 	width:24px;
 	border-radius: 8px;
 }
+.white {
+	background: white;
+}
+.center {
+	text-align: center;
+}
+.shacosidebar {
+	margin: -60px 0 0 0;
+}
+.shacoleftsidebar2 {
+    padding: 50px;
+    border: 1px solid red;
+}
+.grayback {
+	padding: 50px 50px 75px 50px;
+	height: 1480px;
+	width: 700px;
+	background-image: url("http://s17.postimg.org/l1c821k71/challenger7.png"); 
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 /* Containers */
 
 	.container {
@@ -1993,7 +2014,7 @@
 
 	.wrapper {
 		position: relative;
-		background: #fff;
+		background: #000;
 		overflow-x: hidden;
 		padding: 6em 0 6em 0;
 	}
